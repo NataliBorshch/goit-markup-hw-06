@@ -55,22 +55,59 @@
 
         <!--Модалка герой-->
         <div class="modal-hero  is-hidden " data-modal>
-            <div class="modal">
 
-                <button class="close-button" data-modal-close>
-                    <svg width="11" height="11">
-                        <use href="./img1/sprite.svg#Vector-2">
-                        </use>
-                    </svg>
-                </button>
-                <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-                <ul>
-                    <li>Имя</li>
-                    <li>Телефон</li>
-                    <li>Почта</li>
-                    <li>Комментарий</li>
-                </ul>
-                <button class="modal-send"> Отправить</button>
+            <div class="modal">
+                <form class="form">
+
+                    <button class="close-button" data-modal-close>
+                        <svg class="modal-close" width="11" height="11">
+                            <use href="./img1/sprite.svg#Vector-2">
+                            </use>
+                        </svg>
+                    </button>
+
+                    <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+                    <ul class="form-fill list">
+                        <li class="form-item">
+                            <label for="name" class="form-label">Имя</label>
+
+                            <input type="text" name="name" id="name" class="form-input">
+                            <svg class="form-icon" width="12" height="12">
+                                <use href="./img1/sprite.svg#name"></use>
+                            </svg>
+
+                        </li>
+                        <li class="form-item">
+                            <label for="tel" class="form-label">Телефон</label>
+                            <input type="tel" name="tel" id="tel" class="form-input">
+                            <svg class="form-icon" width="13" height="13">
+                                <use href="./img1/sprite.svg#namber"></use>
+                            </svg>
+                        </li>
+                        <li class="form-item">
+                            <label for="email" class="form-label">Почта</label>
+                            <input type="email" name="email" id="email" class="form-input">
+                            <svg class="form-icon" width="15" height="12">
+                                <use href="./img1/sprite.svg#mail"></use>
+                            </svg>
+                        </li>
+                        <li class="form-item">
+                            <label for="coment" class="form-label">Комментарий</label>
+                            <textarea id="coment" class="form-area" placeholder="Введите текст"></textarea>
+                        </li>
+                    </ul>
+                    <div class="dogovir">
+                        <input type="checkbox" name="dogovir" value="agree-dogovir" id="agree-dogovir" class="checkbox">
+                        <span class="icon"></span>
+                        <label for="agree-dogovir" class="item-dogovir">Соглашаюсь с рассылкой и принимаю <a href=""
+                                class="link-dogovir">Условия
+                                договора</a></label>
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit" class="modal-send"> Отправить</button>
+                    </div>
+
+                </form>
 
             </div>
 
@@ -361,7 +398,7 @@
 
     <footer>
         <div class="container footer-box">
-            <div class="box">
+            <div class="box1">
                 <b lang="en" class="logo"><span>Web </span>Studio </b>
                 <address>
                     <ul class="list contacts">
@@ -374,7 +411,7 @@
                 </address>
             </div>
             </ul>
-            <div class="box">
+            <div class="box2">
                 <b class="sign">Присоединяйтесь</b>
                 <ul class="list sign-networks">
                     <li class="item">
@@ -413,15 +450,33 @@
                 </ul>
             </div>
 
-            <b class=" box sign">Подпишитесь на рассылку</b>
-            <button class="button box ">Подписаться
-                <svg class="icon-iconsend" width="24" height="24">
-                    <use href="./img1/sprite.svg#iconsend"></use>
-                </svg>
-            </button>
+            <form class="form">
+                <div class="form-fild">
+                    <label for="address-email" class="form-label sign">Подпишитесь на рассылку</label>
+                    <input type="email" name="address-email" id="address-email" placeholder="E-mail" class="form-input">
+                </div>
+                <div class="form-button">
+                    <button type="submit" class="button box ">Подписаться
+                        <svg class="icon-iconsend" width="24" height="24">
+                            <use href="./img1/sprite.svg#iconsend"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
 
         </div>
     </footer>
+    <script>
+        (() => {
+            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+            });
+        })();
+    </script>
 
     <script src="./js/modal.js"></script>
 

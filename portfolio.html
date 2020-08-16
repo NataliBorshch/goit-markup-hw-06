@@ -225,7 +225,7 @@
                         <a href="" class="work">
                             <div class="img-overlay">
                                 <img src="./img1/portfolio/9.jpg" width: 370px; height: 294px; alt="Ноутбук">
-                                 <div class="text-overlay">
+                                <div class="text-overlay">
                                     <p class="work-excerpt">Технокряк это современная площадка распространения
                                         коронавируса.
                                         Компании
@@ -248,7 +248,7 @@
     <!--футер-->
     <footer>
         <div class="container footer-box">
-            <div class="box contacts-bo ">
+            <div class="box1">
                 <b lang="en" class="logo"><span>Web </span>Studio </b>
 
                 <address>
@@ -262,7 +262,7 @@
                 </address>
             </div>
             </ul>
-            <div class="box">
+            <div class="box2">
                 <b class="sign">Присоединяйтесь</b>
                 <ul class="list  sign-networks">
                     <li class="item">
@@ -300,18 +300,33 @@
                     </li>
                 </ul>
             </div>
-
-            <b class="sign box">Подпишитесь на рассылку</b>
-            <button class="button box ">Подписаться
-                <svg class="icon-iconsend" width="24" height="24">
-                    <use href="./img1/sprite.svg#iconsend"></use>
-                </svg>
-            </button>
+            <form class="form">
+                <div class="form-fild">
+                    <label for="address-email" class=" form-label sign ">Подпишитесь на рассылку</label>
+                    <input type="email" name="address-email" id="address-email" placeholder="E-mail" class="form-input">
+                </div>
+                <div class="form-button">
+                    <button class="button ">Подписаться
+                        <svg class="icon-iconsend" width="24" height="24">
+                            <use href="./img1/sprite.svg#iconsend"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
 
         </div>
 
     </footer>
-
+    <script>
+        (() => {
+            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                e.preventDefault();
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+            });
+        })();
+    </script>
 </body>
 
 </html>

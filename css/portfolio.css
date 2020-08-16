@@ -310,15 +310,6 @@ header .contacts-link:hover,
 }
 
 
-
-
-
-
-
-
-
-
-
 /*футер*/
 
 footer {
@@ -331,14 +322,13 @@ footer {
     color: var(--focus-color);
 }
 
-.box .logo {
+.box1 .logo {
     display: inline-block;
     margin-bottom: 20px;
 }
 
 .sign-networks {
     display: flex;
-    margin-right: 93px;
 }
 
 .sign-networks .link {
@@ -373,31 +363,8 @@ footer {
 .footer-box {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
 }
 
-
-footer .button {
-
-    border-radius: 4px;
-    justify-content: center;
-    width: 200px;
-    height: 50px;
-    align-items: center;
-    border: 1px solid transparent;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 1.875;
-    display: flex;
-
-    letter-spacing: 0.06em;
-    color: var(--focus-color);
-    background: var(--accent-color);
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .icon-iconsend {
     fill: currentColor;
@@ -412,9 +379,14 @@ footer .button:active {
     outline: none;
 }
 
-.contacts{
+footer .box1 {
     margin-right: 70px;
 }
+
+footer .box2 {
+    margin-right: 93px;
+}
+
 footer .contacts-item {
     font-family: Roboto;
     font-style: normal;
@@ -461,9 +433,68 @@ footer>address {
     margin-left: 10px;
 }
 
+footer .button {
+
+    border-radius: 4px;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    border: 1px solid transparent;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.875;
+    display: flex;
+
+    letter-spacing: 0.06em;
+    color: var(--focus-color);
+    background: var(--accent-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+footer .form {
+    display: flex;
+    width: 570px;
+    height: 86px;
+}
+
+footer .form-input {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 15px 16px;
+
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #2F303A;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+}
+
+footer input::placeholder {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 20px;
+
+    display: flex;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer .form-button {
+    display: flex;
+    align-items: flex-end;
+}
+
 .sign {
     text-transform: uppercase;
     margin-bottom: 20px;
     display: block;
+    font-weight: bold;
 
 }
